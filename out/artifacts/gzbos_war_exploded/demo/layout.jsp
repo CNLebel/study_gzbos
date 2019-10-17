@@ -24,7 +24,7 @@
     <div data-options="region:'south'" style="height:50px;">B</div>
     <div data-options="region:'center'">E</div>
     <div data-options="region:'east'"  style="width:180px;">C</div>
-    <div data-options="region:'west'"  style="width:100px;">D</div> 
+    <div data-options="region:'west'"  style="width:100px;">D</div>
 
 </body>
 </html>
