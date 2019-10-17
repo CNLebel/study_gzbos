@@ -6,7 +6,7 @@
   <session-factory>
     <property name="connection.url">jdbc:mysql://104.225.151.222:3306/gzbos</property>
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-    <mapping class="com.gyf.bos.model.Uesr"/>
+    <mapping class="com.gyf.bos.model.User"/>
     <mapping resource="com/gyf/bos/model/User.hbm.xml"/>
     <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->

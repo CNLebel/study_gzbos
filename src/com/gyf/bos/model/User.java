@@ -3,7 +3,7 @@ package com.gyf.bos.model;
 import java.sql.Date;
 import java.util.Objects;
 
-public class Uesr {
+public class User {
     private String id;
     private String username;
     private String password;

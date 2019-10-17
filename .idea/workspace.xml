@@ -8,20 +8,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6105c649-c0d6-4bd4-a4f8-8518e1bd34c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/Uesr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/User.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/IUserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/IBaseDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/IBaseDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/test/dome01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/test/test2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/junit-4.7.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/applictionContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gzbos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gzbos.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/demo/layout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/demo/layout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Uesr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/User.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/User.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/applictionContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Uesr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/User.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/User.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/model/Uesr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/model/User.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/User.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/demo/accordion.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/demo/accordion.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/demo/tabs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/demo/tabs.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/demo/ztree2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/demo/ztree2.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,11 +73,14 @@
     <select />
   </component>
   <component name="FavoritesManager">
-    <favorites_list name="gzbos" />
+    <favorites_list name="gzbos">
+      <favorite_root url="file://$PROJECT_DIR$/config/applictionContext.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -99,29 +108,33 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="JPA.DatabaseSchemaImportDialog" value="4c1e8c14-f48f-43a5-9247-0f799ac9d2c3" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/gyf/bos/model/User.hbm.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\LiTong\Learn\studyjava\gzbos\web" />
-      <recent name="F:\LiTong\Learn\studyjava\gzbos\src\com\gyf\bos\web\filter" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\LiTong\Learn\studyjava\gzbos\config" />
-      <recent name="F:\LiTong\Learn\studyjava\gzbos\web\WEB-INF\lib" />
-      <recent name="F:\LiTong\Learn\studyjava\gzbos\web\WEB-INF" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="com.gyf.bos.model" />
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\LiTong\Learn\studyjava\gzbos\web\WEB-INF\lib" />
+      <recent name="F:\LiTong\Learn\studyjava\gzbos\web" />
+      <recent name="F:\LiTong\Learn\studyjava\gzbos\src\com\gyf\bos\web\filter" />
       <recent name="F:\LiTong\Learn\studyjava\gzbos\config" />
+      <recent name="F:\LiTong\Learn\studyjava\gzbos\web\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -141,7 +154,53 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.dome01">
+    <configuration name="dome01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gzbos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.dome01" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dome01.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gzbos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.dome01" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gzbos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.test2" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 8.5.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER" value="false" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
@@ -217,6 +276,13 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.dome01" />
+        <item itemvalue="JUnit.test2" />
+        <item itemvalue="JUnit.dome01.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
@@ -226,18 +292,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c80a403c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@af80bcff" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c80a403c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@40cb639a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c80a403c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@40cb639a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@90d56541" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@af80bcff" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@24ebce6c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -256,7 +316,8 @@
       <option name="presentableId" value="Default" />
       <updated>1571196849964</updated>
       <workItem from="1571196854784" duration="13604000" />
-      <workItem from="1571271196758" duration="4698000" />
+      <workItem from="1571271196758" duration="6535000" />
+      <workItem from="1571287850134" duration="956000" />
     </task>
     <servers />
   </component>

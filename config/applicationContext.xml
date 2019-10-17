@@ -29,13 +29,13 @@
                 <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.format_sql">true</prop>
                 <prop key="hibernate.hbm2ddl.auto">update</prop>
-                <prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
             </props>
         </property>
 
         <property name="mappingDirectoryLocations">
             <list>
-<!--                <value>classpath:com/gyf/bos/model</value>-->
+                <value>classpath:com/gyf/bos/model</value>
             </list>
         </property>
     </bean>
@@ -44,8 +44,12 @@
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
 
+    <bean class="org.springframework.orm.hibernate3.HibernateTemplate">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+
 <!--    组件扫描-->
-    <context:component-scan base-package="com.gyf.bos" />
+    <context:component-scan base-package="com.gyf.bos.*" />
 
 <!--    <context:annotation-config></context:annotation-config>-->
 
