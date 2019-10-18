@@ -11,9 +11,11 @@
         <action name="page_*_*">
             <result name="success">/WEB-INF/pages/{1}/{2}.jsp</result>
         </action>
+
+        <action name="userAction_*" class="com.gyf.bos.web.action.UserAction" method="{1}">
+            <result name="success"></result>
+        </action>
     </package>
 
-<!--    <package name="default" namespace="/*" extends="struts-default">-->
-<!--        -->
-<!--    </package>-->
+
 </struts>
