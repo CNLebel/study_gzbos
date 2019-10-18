@@ -8,26 +8,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6105c649-c0d6-4bd4-a4f8-8518e1bd34c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/IUserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/IBaseDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/IBaseDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/test/dome01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/test/test2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/junit-4.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/base/BaseServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/base/IBaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/test/dome02.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/applictionContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gzbos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gzbos.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Uesr.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/User.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/User.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/applictionContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Uesr.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/User.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/User.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/model/Uesr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/model/User.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/User.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/base/IBaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/base/IBaseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/base/IBaseDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/impl/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/gzbos/com/test/dome01.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/gzbos/com/test/dome01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/IBaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/IBaseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/IBaseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/BaseDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/test/dome01.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/test/dome01.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +113,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -154,7 +150,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.dome01">
+  <component name="RunManager" selected="JUnit.dome02">
     <configuration name="dome01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gzbos" />
       <extension name="coverage">
@@ -182,6 +178,21 @@
       <option name="MAIN_CLASS_NAME" value="com.test.dome01" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dome02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gzbos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.dome02" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -278,9 +289,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.dome02" />
+        <item itemvalue="JUnit.dome01.test" />
         <item itemvalue="JUnit.dome01" />
         <item itemvalue="JUnit.test2" />
-        <item itemvalue="JUnit.dome01.test" />
       </list>
     </recent_temporary>
   </component>
@@ -317,8 +329,17 @@
       <updated>1571196849964</updated>
       <workItem from="1571196854784" duration="13604000" />
       <workItem from="1571271196758" duration="6535000" />
-      <workItem from="1571287850134" duration="956000" />
+      <workItem from="1571287850134" duration="2025000" />
+      <workItem from="1571365815707" duration="3610000" />
     </task>
+    <task id="LOCAL-00001" summary="20191017:13.09">
+      <created>1571288991005</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571288991005</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,5 +357,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="20191017:13.09" />
+    <option name="LAST_COMMIT_MESSAGE" value="20191017:13.09" />
   </component>
 </project>

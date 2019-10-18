@@ -1,12 +1,14 @@
 package com.gyf.bos.dao.impl;
 
 import com.gyf.bos.dao.IUserDao;
-import com.gyf.bos.dao.base.IBaseDaoImpl;
+import com.gyf.bos.dao.base.BaseDaoImpl;
 import com.gyf.bos.model.User;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class UserDaoImpl extends IBaseDaoImpl<User> implements IUserDao {
+public class UserDaoImpl extends BaseDaoImpl<User> implements IUserDao {
+
+
 
 
     @Override

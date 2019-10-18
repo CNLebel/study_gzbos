@@ -2,6 +2,8 @@ package com.test;
 
 import com.gyf.bos.dao.IUserDao;
 import com.gyf.bos.model.User;
+import com.gyf.bos.service.IUserService;
+import com.gyf.bos.service.base.IBaseService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +14,10 @@ import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:applicationContext.xml")
-public class dome01 {
+public class dome02 {
 
     @Autowired
-    private IUserDao userDao;
+    private IUserService userService;
 
     @Test
     public void test(){
@@ -23,11 +25,11 @@ public class dome01 {
         user.setUsername("abc");
         user.setPassword("123");
 
-//        userDao.save(user);
+        userService.save(user);
 
         //获取所有用户
 
-        List<User> users = userDao.findAll();
-        System.out.println(users);
+//        List<User> users = userDao.findAll();
+//        System.out.println(users);
     }
 }
