@@ -8,22 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6105c649-c0d6-4bd4-a4f8-8518e1bd34c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/base/BaseServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/base/IBaseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/test/dome02.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/base/IBaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/base/IBaseDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/base/IBaseDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/impl/UserDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/gzbos/com/test/dome01.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/gzbos/com/test/dome01.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/IBaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/IBaseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/IBaseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/BaseDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/test/dome01.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/test/dome01.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +135,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.dome02">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.45">
     <configuration name="dome01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gzbos" />
       <extension name="coverage">
@@ -330,7 +315,7 @@
       <workItem from="1571196854784" duration="13604000" />
       <workItem from="1571271196758" duration="6535000" />
       <workItem from="1571287850134" duration="2025000" />
-      <workItem from="1571365815707" duration="3610000" />
+      <workItem from="1571365815707" duration="4344000" />
     </task>
     <task id="LOCAL-00001" summary="20191017:13.09">
       <created>1571288991005</created>
