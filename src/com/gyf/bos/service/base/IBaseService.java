@@ -13,4 +13,5 @@ public interface IBaseService<T> {
     public T find(Serializable id);
 
     public List<T> findAll();
+
 }

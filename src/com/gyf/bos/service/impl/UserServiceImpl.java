@@ -4,6 +4,7 @@ import com.gyf.bos.dao.IUserDao;
 import com.gyf.bos.model.User;
 import com.gyf.bos.service.IUserService;
 import com.gyf.bos.service.base.BaseServiceImpl;
+import com.gyf.bos.utils.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,6 +21,19 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements IUserServi
     @Override
     public User findByTel(String tel) {
         return null;
+    }
+
+    @Override
+    public User login(String username, String password) {
+        return userDao.find(username, MD5Utils.text2md5(password));
+    }
+
+    @Override
+    public void modifyPassword(String newPad, String userId) {
+        String hql = "UPDATE User SET password = ? WHERE id = ?";
+        userDao.executeUpdate(hql,MD5Utils.text2md5(newPad), userId);
+        userDao.executeUpdateByQueryName("updatePwd", MD5Utils.text2md5(newPad), userId);
+
     }
 
     @Override
@@ -46,4 +60,6 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements IUserServi
     public List<User> findAll() {
         return userDao.findAll();
     }
+
+
 }
