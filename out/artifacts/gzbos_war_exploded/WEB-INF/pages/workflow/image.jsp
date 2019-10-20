@@ -9,10 +9,10 @@
 <body>
 <!-- 1.获取到规则流程图 -->
 <img style="position: absolute;top: 0px;left: 0px;"
-	 src="${pageContext.request.contextPath}/processDefinitionAction_viewpng?id=${pdi }">
+	 src="processInstanceAction_viewImage?deploymentId=${deploymentId }&imageName=${imageName}">
 
 <!-- 2.根据当前活动的坐标，动态绘制DIV -->
-<div style="position: absolute;border:1px solid red;top:${y-1}px;left:${x-1}px;width:${width}px;height:${height}px;">
-</div> 
+<div style="position: absolute;border:1px solid red;top:${y}px;left:${x}px;width:${width}px;height:${height}px;">
+</div>
 </body>
 </html>

@@ -34,7 +34,6 @@
 			rownumbers : true,
 			singleSelect : true,
 			fitColumns : true,
-			height:280,
 			toolbar : [
 				{
 					id : 'deploy',
@@ -46,11 +45,7 @@
 				}
 			]
 		});
-		
-		$("#dlg").dialog('close');
 	});
-	
-	
 </script>	
 </head>
 <body class="easyui-layout">
@@ -71,53 +66,20 @@
   				<tr>
   					<td>
   						<s:property value="id"/> <!-- 从root找 -->
+  						<s:property value="#processDefinition.id"/> <!-- 从map找 -->
   					</td>
   					<td><s:property value="name"/></td>
   					<td><s:property value="key"/></td>
   					<td><s:property value="version"/></td>
   					<td>
-  						<a onclick="showPng('${id}')"
-  						 class="easyui-linkbutton" data-options="iconCls:'icon-search'">查看流程图</a>
-  						 <a onclick="del('${id}')"
-  						 class="easyui-linkbutton">删除</a>
+  						<s:a action="processDefinitionAction_viewpng" namespace="/" cssClass="easyui-linkbutton" data-options="iconCls:'icon-search'">查看流程图
+  							<s:param name="id" value="id"></s:param>
+  						</s:a>
   					</td>
-  					<script type="text/javascript">
-						function showPng(id) {
-							var url = "${pageContext.request.contextPath}/processDefinitionAction_viewpng?id=" + id;
-							//在新窗口中打开流程图
-							window.open(url);  
-						}
-						
-						function del(id){
-							var url = "${pageContext.request.contextPath}/processDefinitionAction_del?id=" + id;
-							$.messager.confirm("确认信息","你确定要删除流程定义",function(r){
-								if(r == false) return;
-								$.post(url,
-									function(data){
-										if(data == 1){
-											//删除成功
-											$.messager.alert("提醒","删除成功","info",function(){
-												//刷新页面
-												window.location.href = "${pageContext.request.contextPath}/processDefinitionAction_list";
-											});
-										}else{
-											//删除失败
-											$.messager.alert("提醒","删除失败");
-										}
-									}
-								);
-							});
-						}
-</script>
   				</tr>
   				</s:iterator>
   		</tbody>
   	</table>
   </div>
-  
- <div id="dlg" class="easyui-dialog" title="流程图" data-options="iconCls:'icon-save'" style="width:400px;height:200px;padding:10px">
-	</div>
-  
-
 </body>
 </html>

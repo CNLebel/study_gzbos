@@ -61,15 +61,13 @@
   						<div id="div${id }"></div>
   						<script type="text/javascript">
   							//根据流程实例id查询流程变量
-  							$.post("${pageContext.request.contextPath}/processInstanceAction_findData",{"id":'${id}'},function(data){
+  							$.post("${pageContext.request.contextPath}/processInstanceAction_findData.action",{"id":'${id}'},function(data){
   								$("#div${id}").html(data);
   							});
   						</script>
   						<script type="text/javascript">
   							function showPng(id){
-  								var url = "${pageContext.request.contextPath}/processInstanceAction_showPng?id=" + id;
-  								//在新窗口中打开流程图
-  								window.open(url); 
+  								window.showModalDialog("${pageContext.request.contextPath}/processInstanceAction_showPng.action?id="+id);
   							}
   						</script>
   					</td>

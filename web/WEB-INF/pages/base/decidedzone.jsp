@@ -44,41 +44,51 @@
 	}
 	
 	function doAssociations(){
-		
-		//如果没有选中行，不能显示窗口
-		var rows = $("#grid").datagrid("getSelections");
-		if(rows.length == 1){
-			var decidedzoneId = rows[0].id;
-			$('#customerWindow').window('open');
-			
-			//设置 隐藏id的
-			$("input[name=id]").val(decidedzoneId);
-			
-			
-			//发送网络请求
-			var url = "{pageContext.request.contextPath}/decidedzoneAction_findnoassociationCustomers";
-			$.post(url,function(data){
-				//遍历json数组
-				$("#noassociationSelect").empty();
-				for(var i = 0; i < data.length; i++){
-					var item = data[i];
-					$("#noassociationSelect").append("<option value='" + item.id +"'>" + item.name + "</option>");
-				} 
-			},"json");
-			
-			//右边
-			var url2 = "{pageContext.request.contextPath}/decidedzoneAction_findhasAssociationCustomers";
-			$.post(url2,{"id":rows[0].id},function(data){
-				//遍历json数组
-				$("#associationSelect").empty();
-				for(var i = 0; i < data.length; i++){
-					var item = data[i];
-					$("#associationSelect").append("<option value='" + item.id +"'>" + item.name + "</option>");
-				} 
-			},"json");
+	    //是否选中定区
+        var selectedRows = $("#grid").datagrid('getSelections');
+
+        if(selectedRows.length == 1){
+            $('#customerWindow').window('open');
+
+            var decidedzoneId = selectedRows[0].id;//选中的定区id
+            //给隐藏定区id赋值
+            $('#customerDecidedZoneId').val(decidedzoneId);
+            //alert( $('#customerDecidedZoneId').val());
+            //return;
+            //显示未关联客户
+			var url = '${pageContext.request.contextPath}/decidedzoneAction_findnoassociationCustomers.action'
+			$.post(url,function (data) {
+                    $('#noassociationSelect').empty();//清空
+                    //遍历数组
+                    for(var i =0;data.length;i++){
+                        //取一行数据
+                        var rowData = data[i];
+
+                        //动态给selected标签添加option
+                        var option = '<option value="'+rowData.id+'">'+rowData.name+'</option>'
+                        $('#noassociationSelect').append(option);
+                    }
+            });
+
+			//显示选中定区关连的客户
+            url = '${pageContext.request.contextPath}/decidedzoneAction_findhasassociationCustomers.action'
+            $.post(url,{id:decidedzoneId},function (data) {
+                $('#associationSelect').empty();//清空
+                //遍历数组
+                for(var i =0;data.length;i++){
+                    //取一行数据
+                    var rowData = data[i];
+
+                    //动态给selected标签添加option
+                    var option = '<option value="'+rowData.id+'">'+rowData.name+'</option>'
+                    $('#associationSelect').append(option);
+                }
+            });
+
 		}else{
-			$.messager.alert("提示","未选中行或者选中多行","info");
+            $.messager.alert('Tips','未选择一个定区','error');
 		}
+
 	}
 	
 	//工具栏
@@ -159,7 +169,7 @@
 			pageList: [30,50,100],
 			pagination : true,
 			toolbar : toolbar,
-			url : "${pageContext.request.contextPath}/decidedzoneAction_pageQuery",
+			url : "${pageContext.request.contextPath}/decidedzoneAction_pageQuery.action",
 			idField : 'id',
 			columns : columns,
 			onDblClickRow : doDblClickRow
@@ -189,11 +199,29 @@
 		$("#btn").click(function(){
 			alert("执行查询...");
 		});
+
+		$("#save").click(function () {
+			$("#addDeciedzoneForm").submit();
+        });
 		
-		$("#save").click(function() {
-			$("#addDecidedzoneFrom").submit();
-		});
+		
+		$("#toRight").click(function () {
+			$("#associationSelect").append($("#noassociationSelect option:selected"));
+        });
+
+        $("#toLeft").click(function () {
+            $("#noassociationSelect").append($("#associationSelect option:selected"));
+        });
+
+        $("#associationBtn").click(function () {
+            //把右边的select的option都设置为选中
+			$("#associationSelect option").attr('selected','selected');
+
+			//表单提交
+			$("#customerForm").submit();
+        });
 	});
+
 	function doDblClickRow(){
 		alert("双击表格数据...");
 		$('#association_subarea').datagrid( {
@@ -311,7 +339,7 @@
 		</div>
 		
 		<div style="overflow:auto;padding:5px;" border="false">
-			<form id="addDecidedzoneFrom" action="${pageContext.request.contextPath }/decidedzoneAction_save" method="post">
+			<form id="addDeciedzoneForm" action="${pageContext.request.contextPath}/decidedzoneAction_save.action">
 				<table class="table-edit" width="80%" align="center">
 					<tr class="title">
 						<td colspan="2">定区信息</td>
@@ -327,18 +355,18 @@
 					<tr>
 						<td>选择负责人</td>
 						<td>
-							<input class="easyui-combobox" name="staff.id"  
-    							data-options="valueField:'id',textField:'name',url:'${pageContext.request.contextPath}/staffAction_listjson'" />  
+							<input class="easyui-combobox" name="staff.id"
+    							data-options="valueField:'id',textField:'name',url:'${pageContext.request.contextPath}/staffAction_listJson.action'" />
 						</td>
 					</tr>
 					<tr height="300">
 						<td valign="top">关联分区</td>
 						<td>
-							<table id="subareaGrid"  class="easyui-datagrid" border="false" style="width:300px;height:300px" 
-							data-options="url:'${pageContext.request.contextPath}/subareaAction_listjson',fitColumns:true,singleSelect:false">
+							<table id="subareaGrid"  class="easyui-datagrid" border="false" style="width:300px;height:300px"
+								   data-options="url:'${pageContext.request.contextPath}/subareaAction_listJson.action',fitColumns:true,singleSelect:false">
 								<thead>  
 							        <tr>  
-							            <th data-options="field:'subareaid',width:30,checkbox:true">编号</th>  
+							            <th data-options="field:'subareaId',width:30,checkbox:true">编号</th>
 							            <th data-options="field:'addresskey',width:150">关键字</th>  
 							            <th data-options="field:'position',width:200,align:'right'">位置</th>  
 							        </tr>  
@@ -377,48 +405,24 @@
 	<!-- 关联客户窗口 -->
 	<div class="easyui-window" title="关联客户窗口" id="customerWindow" collapsible="false" closed="true" minimizable="false" maximizable="false" style="top:20px;left:200px;width: 400px;height: 300px;">
 		<div style="overflow:auto;padding:5px;" border="false">
-			<form id="customerForm" action="${pageContext.request.contextPath }/decidedzoneAction_assigncustomerstodecidedzone" method="post">
+			<form id="customerForm" action="${pageContext.request.contextPath }/decidedzoneAction_assigncustomerstodecidedzone.action" method="post">
 				<table class="table-edit" width="80%" align="center">
 					<tr class="title">
 						<td colspan="3">关联客户</td>
 					</tr>
 					<tr>
 						<td>
-							<input type="hidden" name="id" id="customerDecidedZoneId" />
-							<select id="noassociationSelect" multiple="multiple" size="10"></select>
+							<input type="hidden" name="id" id="customerDecidedZoneId"/>
+							<select id="noassociationSelect" multiple="multiple" size="10">
+							</select>
 						</td>
 						<td>
 							<input type="button" value="》》" id="toRight"><br/>
 							<input type="button" value="《《" id="toLeft">
-							
 						</td>
 						<td>
 							<select id="associationSelect" name="customerIds" multiple="multiple" size="10"></select>
 						</td>
-						
-						<script type="text/javascript">
-							
-								$(function () {
-									$("#toRight").click(function() {
-										//把左边的移动在右边
-										$("#associationSelect").append($("#noassociationSelect option:selected"));
-									});
-									
-									$("#toLeft").click(function() {
-										//把右边移动到左边
-										$("#noassociationSelect").append($("#associationSelect option:selected"));
-									});
-									
-									//监听关联按钮事件
-									$("#associationBtn").click(function() {
-										//设置右边选中
-										$("#associationSelect option").attr("selected","selected");
-										
-										//提交表单
-										$("#customerForm").submit();
-									});
-								});
-							</script>
 					</tr>
 					<tr>
 						<td colspan="3"><a id="associationBtn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">关联客户</a> </td>

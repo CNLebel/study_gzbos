@@ -27,22 +27,6 @@
 	src="${pageContext.request.contextPath }/js/easyui/locale/easyui-lang-zh_CN.js"
 	type="text/javascript"></script>
 <script type="text/javascript">
-
-	//将form表示的数据封装成一个json对象{name:23}
-	function getFormData(formId) {  
-		  var form = document.getElementById(formId);  
-		  var data = {};  
-		  var tagElements = form.getElementsByTagName('input');  
-		 
-		  for (var j = 0; j < tagElements.length; j++){ 
-			  var input = tagElements[j];
-			  var n = input.name;
-			  var v = input.value;
-			  data[n] = v; 
-		  }
-		  return data;  
-	}
-
 	function doAdd(){
 		$('#addSubareaWindow').window("open");
 	}
@@ -61,7 +45,7 @@
 	
 	function doExport(){
 		//alert("导出");
-		window.location.href = "${pageContext.request.contextPath}/subareaAction_exportXls"
+		location.href = '${pageContext.request.contextPath}/subareaAction_exportExcel.action';
 	}
 	
 	function doImport(){
@@ -162,7 +146,22 @@
 		width : 200,
 		align : 'center'
 	} ] ];
-	
+
+	//获取表彰的数据
+    function getFormData(formId) {
+        var form = document.getElementById(formId);
+        var data = {};
+        var tagElements = form.getElementsByTagName('input');
+
+        for (var j = 0; j < tagElements.length; j++){
+            var input = tagElements[j];
+            var n = input.name;
+            var v = input.value;
+            data[n] = v;
+        }
+        return data;
+    }
+
 	$(function(){
 		// 先将body隐藏，再显示，不会出现页面刷新效果
 		$("body").css({visibility:"visible"});
@@ -174,10 +173,11 @@
 			border : true,
 			rownumbers : true,
 			striped : true,
-			pageList: [2,4],
+			pageSize:2,
+			pageList: [2,4,6],
 			pagination : true,
 			toolbar : toolbar,
-			url : "${pageContext.request.contextPath}/subareaAction_pageQuery",
+			url : "${pageContext.request.contextPath}/subareaAction_pageQuery.action",
 			idField : 'id',
 			columns : columns,
 			onDblClickRow : doDblClickRow
@@ -204,26 +204,32 @@
 	        height: 400,
 	        resizable:false
 	    });
+		$("#searchBtn").click(function(){
+			//alert("执行查询...");
+			//1.获取表单数据
+			var  data = getFormData("searchSubareaForm");
+			//alert(data);
+			console.log(data);
 
+			//2.调用grid的load方法
+			$("#grid").datagrid('load',data);
+
+
+
+
+
+		});
 		
 		$("#save").click(function () {
-			var v = get; $("#addSubareaForm").form("validate");
-			if(v){
-				$("#addSubareaForm").submit();
-			}
-		});
-		
-		   
 
-		$("#btn").click(function() {
-			//form表单请求参数
-			var p = getFormData("searchForm");
-			/* var s=JSON.stringify(p);
-			alert(s); */
-			$('#grid').datagrid('load',p);
-			
-			$('#searchWindow').window("close");
-		});
+		    var v = $("#addSubareaForm").form('validate');
+		    if(v){
+                $("#addSubareaForm").submit();
+			}else{
+		        $.messager.alert("提示","表单数据不正确","error");
+			}
+        });
+		
 	});
 
 	function doDblClickRow(){
@@ -244,7 +250,7 @@
 		</div>
 		
 		<div style="overflow:auto;padding:5px;" border="false">
-			<form id="addSubareaForm" action="${pageContext.request.contextPath }/subareaAction_add">
+			<form id="addSubareaForm" action="${pageContext.request.contextPath}/subareaAction_save.action">
 				<table class="table-edit" width="80%" align="center">
 					<tr class="title">
 						<td colspan="2">分区信息</td>
@@ -257,7 +263,7 @@
 						<td>选择区域</td>
 						<td>
 							<input class="easyui-combobox" name="region.id"  
-    							data-options="valueField:'id',textField:'name',url:'${pageContext.request.contextPath }/regionAction_listjson'" />  
+    							data-options="valueField:'id',textField:'name',url:'${pageContext.request.contextPath}/regionAction_listJson.action'" />
 						</td>
 					</tr>
 					<tr>
@@ -293,7 +299,7 @@
 	<!-- 查询分区 -->
 	<div class="easyui-window" title="查询分区窗口" id="searchWindow" collapsible="false" minimizable="false" maximizable="false" style="top:20px;left:200px">
 		<div style="overflow:auto;padding:5px;" border="false">
-			<form id="searchForm">
+			<form id="searchSubareaForm">
 				<table class="table-edit" width="80%" align="center">
 					<tr class="title">
 						<td colspan="2">查询条件</td>
@@ -315,7 +321,7 @@
 						<td><input type="text" name="addresskey"/></td>
 					</tr>
 					<tr>
-						<td colspan="2"><a id="btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查询</a> </td>
+						<td colspan="2"><a id="searchBtn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查询</a> </td>
 					</tr>
 				</table>
 			</form>

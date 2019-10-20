@@ -37,6 +37,32 @@
 				$('#noticebillForm').submit();
 			}
 		});
+
+		//监听"来电电话"标签的失去焦点事件
+		$("input[name=telephone]").blur(function () {
+			//1.获取电话号码
+			var tel = $("input[name=telephone]").val();
+			//检验
+
+			//2.发送请求，根据号码查找客户信息 noticebillAction_findCustomerByTel
+			var url = "${pageContext.request.contextPath}/noticebillAction_findCustomerByTel"
+			$.post(url,{tel:tel},function (data) {
+				//
+				console.log(data);
+
+				//3.自动填充表格数据
+				//{"address":"天津","decidedzone_id":"","id":3,"name":"王五","station":"搜狗","telephone":"3"}
+           		//3.1 客户ID customerId
+                $("input[name=customerId]").val(data.id);
+                //3.2 客户名字 customerName
+                $("input[name=customerName]").val(data.name);
+				//3.3取件地址 pickaddress
+                $("input[name=pickaddress]").val(data.address);
+
+                //3.4定区id
+				$("input[name=decidedzoneId]").val(data.decidedzone_id);
+            });
+        });
 	});
 </script>
 </head>
@@ -51,7 +77,8 @@
 		</div>
 	</div>
 	<div region="center" style="overflow:auto;padding:5px;" border="false">
-		<form id="noticebillForm" action="${pageContext.request.contextPath}/noticeBillAction_add" method="post">
+		<form id="noticebillForm" action="${pageContext.request.contextPath}/noticebillAction_save.action" method="post">
+			<input type="hidden" name="decidedzoneId">
 			<table class="table-edit" width="95%" align="center">
 				<tr class="title">
 					<td colspan="4">客户信息</td>
@@ -60,30 +87,6 @@
 					<td>来电号码:</td>
 					<td><input type="text" class="easyui-validatebox" name="telephone"
 						required="true" /></td>
-						<script type="text/javascript">
-							$(function () {
-								$("input[name=telephone]").blur(function () {
-									//alert("失去焦点");
-									//发送网络请求
-									var tel = $("input[name=telephone]").val();
-									var url = "${pageContext.request.contextPath}/noticeBillAction_findCustomerByTelephone";
-									$.post(url,{"tel":tel},function(data){
-										if(data != null){
-											$("input[name=customerId]").val(data.id);
-											$("input[name=customerName]").val(data.name);
-											$("input[name=pickaddress]").val(data.address);
-											$("input[name=delegater]").val(data.name);
-										}else{
-											$("input[name=customerId]").val("");
-											$("input[name=customerName]").val("");
-											$("input[name=pickaddress]").val("");
-											$("input[name=delegater]").val("");
-										}
-										
-									},"json");
-								});
-							})
-						</script>
 					<td>客户编号:</td>
 					<td><input type="text" class="easyui-validatebox"  name="customerId"
 						required="true" /></td>

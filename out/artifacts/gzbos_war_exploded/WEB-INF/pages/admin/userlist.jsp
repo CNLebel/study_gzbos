@@ -65,7 +65,7 @@
 		rowspan : 2,
 		align : 'center'
 	}, {
-		field : 'formatBirthday',
+		field : 'birthdayStr',
 		title : '生日',
 		width : 120,
 		rowspan : 2,
@@ -74,7 +74,7 @@
 		title : '其他信息',
 		colspan : 2
 	}, {
-		field : 'roleNames',
+		field : 'rolesStr',
 		title : '角色',
 		width : 800,
 		rowspan : 2
@@ -99,7 +99,10 @@
 			rownumbers : true,
 			striped : true,
 			toolbar : toolbar,
-			url : "${pageContext.request.contextPath}/userAction_pageQuery",
+			pageList:[5,10,15],
+			pageSize:10,
+            pagination:true,
+			url : "${pageContext.request.contextPath}/userAction_pageQuery.action",
 			idField : 'id', 
 			frozenColumns : frozenColumns,
 			columns : columns,
@@ -121,7 +124,7 @@
 	}
 	
 	function doAdd() {
-		//alert("添加用户");
+		alert("添加用户");
 		location.href="${pageContext.request.contextPath}/page_admin_userinfo.action";
 	}
 

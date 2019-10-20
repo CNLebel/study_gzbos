@@ -165,10 +165,13 @@
 			onAfterEdit : function(rowIndex, rowData, changes){
 				console.info(rowData);
 				editIndex = undefined;
-				var url = "${pageContext.request.contextPath}/workOrderManageAction_add";
-				$.post(url,rowData,function(data){
+
+				//发送请求保存数据
+				var url = "${pageContext.request.contextPath}/workordermanageAction_save.action"
+				$.post(url,rowData,function (data) {
 					console.info(data);
-				},"json");
+                })
+
 			}
 		});
 	});

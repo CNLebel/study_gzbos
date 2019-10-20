@@ -25,8 +25,9 @@
 	src="${pageContext.request.contextPath }/js/easyui/ext/jquery.cookie.js"></script>
 <script
 	src="${pageContext.request.contextPath }/js/easyui/locale/easyui-lang-zh_CN.js"
+	type="text/javascript"></script><script
+	src="${pageContext.request.contextPath }/js/jquery.ocupload-1.1.2.js"
 	type="text/javascript"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.ocupload-1.1.2.js"></script>
 <script type="text/javascript">
 	function doAdd(){
 		$('#addRegionWindow').window("open");
@@ -40,7 +41,7 @@
 		alert("删除...");
 	}
 	
-	
+
 	//工具栏
 	var toolbar = [ {
 		id : 'button-edit',	
@@ -60,7 +61,7 @@
 	}, {
 		id : 'button-import',
 		text : '导入',
-		iconCls : 'icon-redo',
+		iconCls : 'icon-redo'
 	}];
 	// 定义列
 	var columns = [ [ {
@@ -109,10 +110,10 @@
 			border : false,
 			rownumbers : true,
 			striped : true,
-			pageList: [10,15,20],
+			pageList: [5,10,15],
 			pagination : true,
 			toolbar : toolbar,
-			url : "${pageContext.request.contextPath}/regionAction_pageQuery",
+			url : "${pageContext.request.contextPath}/regionAction_pageQuery.action",
 			idField : 'id',
 			columns : columns,
 			onDblClickRow : doDblClickRow
@@ -128,20 +129,19 @@
 	        height: 400,
 	        resizable:false
 	    });
-		
-		
-		$("#button-import").upload({
-			action:"{pageContext.request.contextPath}/regionAction_importExcel",
-			name:"excelFile",
-			onComplete:function(data) {
-				
-				if(data == "1"){
-					$.messager.alert("提示","导入成功 ","info");
-				}else{
-					$.messager.alert("提示","导入失败 ","warning");
-				} 
-			}
+
+
+		//绑定一键上传
+		$('#button-import').upload({
+			action:'${pageContext.request.contextPath}/regionAction_importExcel.action',
+			name:'excelFile',
+            onComplete:function (data) {
+				//alert(data);
+				$("#grid").datagrid('reload');
+            }
 		});
+
+
 	});
 
 	function doDblClickRow(){

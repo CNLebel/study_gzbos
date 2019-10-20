@@ -41,13 +41,12 @@
 		});
 		// 注册ajax查询
 		$('#ajax').click(function() {
-			alert("x");
 			var elWin = $("#list").get(0).contentWindow;
 			elWin.$('#grid').datagrid( {
 				pagination : true,
-				url : "${pageContext.request.contextPath}/userAction_pageQuery"
+				url : "${pageContext.request.contextPath}/json/users.json"
 			});
-		}); 
+		});
 	});
 </script>	
 </head>
