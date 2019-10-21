@@ -1,5 +1,7 @@
 package com.gyf.bos.dao.base;
 
+import org.hibernate.Query;
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 
@@ -31,7 +33,7 @@ public class BaseDaoImpl<T> implements IBaseDao<T>{
     }
 
     @Autowired
-    private HibernateTemplate hibernateTemplate;
+    protected HibernateTemplate hibernateTemplate;
 
     @Override
     public void save(T entity) {
@@ -59,5 +61,42 @@ public class BaseDaoImpl<T> implements IBaseDao<T>{
         //entityClass.getSimpleName() 获取类名
         String hql = "from " + entityClass.getSimpleName();
         return this.hibernateTemplate.find(hql);
+    }
+
+    @Override
+    public void executeUpdate(String hql, Object... objs) {
+
+        //获取session
+        Session session = hibernateTemplate.getSessionFactory().getCurrentSession();
+
+        //获取查询对象
+        Query query = session.createQuery(hql);
+
+        //设置参数
+        for(int i=0; i<objs.length; i++){
+            query.setParameter(i, objs[i]);
+        }
+
+        //执行
+        query.executeUpdate();
+
+    }
+
+    @Override
+    public void executeUpdateByQueryName(String queryName, Object... objs) {
+        //获取session
+        Session session = hibernateTemplate.getSessionFactory().getCurrentSession();
+
+
+        //映射文件中查找hql，并返回query对象
+        Query query = session.getNamedQuery(queryName);
+
+        //设置参数
+        for(int i=0; i<objs.length; i++){
+            query.setParameter(i, objs[i]);
+        }
+
+        //执行
+        query.executeUpdate();
     }
 }

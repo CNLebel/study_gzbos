@@ -12,4 +12,8 @@ public interface IBaseDao<T> {
     public T find(Serializable id);
 
     public List<T> findAll();
+
+    public void executeUpdate(String hql,Object... objs);
+
+    public void executeUpdateByQueryName(String queryName,Object... objs);
 }

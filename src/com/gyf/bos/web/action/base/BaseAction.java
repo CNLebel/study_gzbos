@@ -1,4 +1,4 @@
-package com.gyf.bos.web.action;
+package com.gyf.bos.web.action.base;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
