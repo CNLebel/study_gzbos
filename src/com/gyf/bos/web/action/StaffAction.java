@@ -27,14 +27,43 @@ public class StaffAction extends BaseAction<Staff> {
         return SUCCESS;
     }
 
+
+
+    private String ids;
+
+    public void setIds(String ids) {
+        this.ids = ids;
+    }
+
     @Override
-    public String delete() {
-        return null;
+    public String delete() throws IOException {
+
+
+        staffServce.deleteBatch(ids);
+
+        HttpServletResponse response = ServletActionContext.getResponse();
+        response.getWriter().write("success");
+
+        return NONE;
     }
 
     @Override
     public String update() {
-        return null;
+
+        //getModel() [游离/脱管状态 session没有缓存，有id]
+
+        //根据id从数据库获取数据[持久状态-session有缓存，有id]
+        Staff staff = staffServce.find(getModel().getId());
+
+        //更新数据库的数据
+        staff.setName(getModel().getName());
+        staff.setName(getModel().getTelephone());
+        staff.setName(getModel().getStation());
+        staff.setName(getModel().getHaspda());
+        staff.setName(getModel().getStandard());
+        staffServce.update(staff);
+
+        return NONE;
     }
 
     @Override

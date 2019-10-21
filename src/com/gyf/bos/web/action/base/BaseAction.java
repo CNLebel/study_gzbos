@@ -4,6 +4,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import org.apache.poi.ss.formula.functions.T;
 
+import java.io.IOException;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
@@ -35,7 +36,7 @@ public abstract class BaseAction<T> extends ActionSupport implements ModelDriven
 
     public abstract String save();
 
-    public abstract String delete();
+    public abstract String delete() throws IOException;
 
     public abstract String update();
 

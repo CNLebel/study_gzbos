@@ -7,15 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6105c649-c0d6-4bd4-a4f8-8518e1bd34c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/PageBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4c1e8c14-f48f-43a5-9247-0f799ac9d2c3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4c1e8c14-f48f-43a5-9247-0f799ac9d2c3/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/dao/IStaffDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/IStaffDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/StaffDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/StaffDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/service/IStaffServce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/IStaffService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/StaffServceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/StaffServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/dao/IStaffDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/dao/IStaffDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/dao/base/StaffDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/dao/base/StaffDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/IStaffServce.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/impl/StaffServceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/StaffAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/StaffAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/IStaffDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/IStaffDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/base/StaffDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/base/StaffDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/IStaffServce.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/impl/StaffServceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/StaffAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/StaffAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/service/IStaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/IStaffService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/StaffServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/StaffServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/web/action/StaffAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/web/action/StaffAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/web/action/base/BaseAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/web/action/base/BaseAction.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +41,12 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="104.225.151.222" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FavoritesManager">
@@ -68,9 +80,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1SGjVSEE7fZA5vU1sUQlQwHzO5h" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -82,24 +92,31 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\LiTong\Learn\studyjava\gzbos\config" />
-    </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="com.gyf.bos.model" />
-      <recent name="" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\LiTong\Learn\studyjava\gzbos\web\WEB-INF\lib" />
       <recent name="F:\LiTong\Learn\studyjava\gzbos\web" />
       <recent name="F:\LiTong\Learn\studyjava\gzbos\src\com\gyf\bos\web\filter" />
       <recent name="F:\LiTong\Learn\studyjava\gzbos\config" />
       <recent name="F:\LiTong\Learn\studyjava\gzbos\web\WEB-INF" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.gyf.bos.model" />
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\LiTong\Learn\studyjava\gzbos\config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -119,7 +136,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.45">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 7.0.94">
     <configuration name="dome01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gzbos" />
       <extension name="coverage">
@@ -181,15 +198,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 8.5.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:\Program Files\Java\jdk1.7.0_75\jre">
+    <configuration name="Tomcat 7.0.94" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.94" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:\Program Files (x86)\java\jre">
       <option name="OPEN_IN_BROWSER" value="false" />
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8090/gzbos_war_exploded/" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="gzbos:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/gzbos_war_exploded" />
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
@@ -262,7 +278,7 @@
       <item itemvalue="JUnit.dome01.test" />
       <item itemvalue="JUnit.dome02" />
       <item itemvalue="JUnit.test2" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.45" />
+      <item itemvalue="Tomcat Server.Tomcat 7.0.94" />
     </list>
     <recent_temporary>
       <list>
@@ -281,12 +297,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@17442737" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@58f503d2" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@17442737" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2eeb96bc" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@58f503d2" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@155748d4" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -309,6 +325,7 @@
       <workItem from="1571287850134" duration="2025000" />
       <workItem from="1571365815707" duration="10650000" />
       <workItem from="1571616725467" duration="7102000" />
+      <workItem from="1571654610829" duration="4322000" />
     </task>
     <task id="LOCAL-00001" summary="20191017:13.09">
       <created>1571288991005</created>
