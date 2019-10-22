@@ -135,7 +135,7 @@
 		$('#button-import').upload({
 			action:'${pageContext.request.contextPath}/regionAction_importExcel.action',
 			name:'excelFile',
-            onComplete:function (data) {
+			onComplete:function (data) {
 				//alert(data);
 				$("#grid").datagrid('reload');
             }

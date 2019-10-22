@@ -97,4 +97,10 @@ public abstract class BaseAction<T> extends ActionSupport implements ModelDriven
         response.setHeader("content-Type","text/json;charset=utf-8");
         response.getWriter().write(jsonObject.toString());
     }
+
+    public void responseStr(String message) throws IOException {
+        HttpServletResponse response = ServletActionContext.getResponse();
+        response.setHeader("content-Type","text/html;charset=utf-8");
+        response.getWriter().write("message");
+    }
 }
