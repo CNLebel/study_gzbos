@@ -67,22 +67,25 @@ public class Region {
         this.citycode = citycode;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Region region = (Region) o;
-        return Objects.equals(id, region.id) &&
-                Objects.equals(province, region.province) &&
-                Objects.equals(city, region.city) &&
-                Objects.equals(district, region.district) &&
-                Objects.equals(postcode, region.postcode) &&
-                Objects.equals(shortcode, region.shortcode) &&
-                Objects.equals(citycode, region.citycode);
+    public Region() {
+    }
+
+    public Region(String id, String province, String city, String district, String postcode) {
+        this.id = id;
+        this.province = province;
+        this.city = city;
+        this.district = district;
+        this.postcode = postcode;
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(id, province, city, district, postcode, shortcode, citycode);
+    public String toString() {
+        return "Region{" +
+                "id='" + id + '\'' +
+                ", province='" + province + '\'' +
+                ", city='" + city + '\'' +
+                ", district='" + district + '\'' +
+                ", postcode='" + postcode + '\'' +
+                '}';
     }
 }

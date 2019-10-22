@@ -1,5 +1,6 @@
 package com.gyf.bos.dao.base;
 
+import com.gyf.bos.model.PageBean;
 import org.apache.poi.ss.formula.functions.T;
 
 import java.io.Serializable;
@@ -16,4 +17,8 @@ public interface IBaseDao<T> {
     public void executeUpdate(String hql,Object... objs);
 
     public void executeUpdateByQueryName(String queryName,Object... objs);
+
+    public void saveAll(List<T> list);
+
+    public void pageQuery(PageBean<T> pb);
 }

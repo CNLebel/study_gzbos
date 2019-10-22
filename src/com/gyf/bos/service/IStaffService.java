@@ -6,12 +6,6 @@ import com.gyf.bos.service.base.IBaseService;
 
 public interface IStaffService extends IBaseService<Staff> {
 
-    /**
-     * 分布查询
-     * @param pb
-     * */
-    public void pageQuery(PageBean<Staff> pb);
-
 
     /**
      * 批量删除取派员

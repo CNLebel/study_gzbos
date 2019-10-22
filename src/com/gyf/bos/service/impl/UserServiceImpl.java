@@ -1,6 +1,7 @@
 package com.gyf.bos.service.impl;
 
 import com.gyf.bos.dao.IUserDao;
+import com.gyf.bos.model.PageBean;
 import com.gyf.bos.model.User;
 import com.gyf.bos.service.IUserService;
 import com.gyf.bos.service.base.BaseServiceImpl;
@@ -59,6 +60,11 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements IUserServi
     @Override
     public List<User> findAll() {
         return userDao.findAll();
+    }
+
+    @Override
+    public void pageQuery(PageBean<User> pb) {
+
     }
 
 

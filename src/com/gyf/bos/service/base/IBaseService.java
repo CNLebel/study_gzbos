@@ -1,5 +1,6 @@
 package com.gyf.bos.service.base;
 
+import com.gyf.bos.model.PageBean;
 import org.apache.poi.ss.formula.functions.T;
 
 import java.io.Serializable;
@@ -13,5 +14,12 @@ public interface IBaseService<T> {
     public T find(Serializable id);
 
     public List<T> findAll();
+
+
+    /**
+     * 分布查询
+     * @param pb
+     * */
+    public void pageQuery(PageBean<T> pb);
 
 }

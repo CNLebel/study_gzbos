@@ -6,5 +6,4 @@ import com.gyf.bos.model.Staff;
 
 public interface IStaffDao extends IBaseDao<Staff> {
 
-    public void pageQuery(PageBean<Staff> pb);
 }

@@ -84,31 +84,15 @@ public class StaffAction extends BaseAction<Staff> {
 
     public void pageQuery() throws IOException {
         //接收参数 page[当前页], rows[每页显示多少条]
-
         //调用servce 参数里传一个pageBean
-
-        PageBean<Staff> pb = new PageBean<Staff>();
-
         //封装条件
         pb.setCurrentPage(page);
         pb.setPageSize(rows);
-        //条件：from Staff
-        DetachedCriteria dc = DetachedCriteria.forClass(Staff.class);
-        pb.setDetachedCriteria(dc)  ;
 
+        //调用service, 参数里传一个PabeBean
         staffServce.pageQuery(pb);
 
-        //返回json
-         //排除不需要转json的属性
-        JsonConfig config = new JsonConfig();
-        config.setExcludes(new String[]{"currentPage","pageSize","detachedCriteria"});
-
-         //创建json对象
-        JSONObject jsonObject = JSONObject.fromObject(pb, config);
-
-         //响应
-        HttpServletResponse response = ServletActionContext.getResponse();
-        response.setHeader("content-Type","text/json;charset=utf-8");
-        response.getWriter().write(jsonObject.toString());
+        //返回json数据
+        responseJson(pb, new String[]{"currentPage","pageSize","detachedCriteria"});
     }
 }

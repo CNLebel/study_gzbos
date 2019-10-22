@@ -1,15 +1,35 @@
 package com.gyf.bos.web.action.base;
 
+import com.gyf.bos.model.PageBean;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+import net.sf.json.JSONObject;
+import net.sf.json.JsonConfig;
 import org.apache.poi.ss.formula.functions.T;
+import org.apache.struts2.ServletActionContext;
+import org.hibernate.criterion.DetachedCriteria;
 
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
 public abstract class BaseAction<T> extends ActionSupport implements ModelDriven<T> {
     private T t;  //属性-用于接收参数
+
+    protected int page;
+    protected int rows;
+
+    public void setPage(int page) {
+        this.page = page;
+    }
+    public void setRows(int rows) {
+        this.rows = rows;
+    }
+
+    protected PageBean<T> pb =new PageBean<T>();
+
+
 
     //空参构造方法实现t的实例化
     public BaseAction(){
@@ -21,6 +41,14 @@ public abstract class BaseAction<T> extends ActionSupport implements ModelDriven
 
         //把type类型赋值给Class类型
         Class<T> clz = (Class<T>) types[0];
+
+
+        //设置离线查询对象
+        DetachedCriteria dc = DetachedCriteria.forClass(clz);
+        pb.setDetachedCriteria(dc);
+
+
+
 
         //2.通过反射创建对象
         try {
@@ -48,5 +76,25 @@ public abstract class BaseAction<T> extends ActionSupport implements ModelDriven
     @Override
     public T getModel() {
         return t;
+    }
+
+
+    /**
+     * 返回Json数据给客户端
+     * @param obj 转换Json的对象
+     * @param excludes 排除的字段或属性
+     * */
+    public void responseJson(Object obj, String[] excludes) throws IOException {
+
+        JsonConfig config = new JsonConfig();
+        config.setExcludes(excludes);
+
+        //创建json对象
+        JSONObject jsonObject = JSONObject.fromObject(obj, config);
+
+        //响应
+        HttpServletResponse response = ServletActionContext.getResponse();
+        response.setHeader("content-Type","text/json;charset=utf-8");
+        response.getWriter().write(jsonObject.toString());
     }
 }

@@ -1,7 +1,10 @@
 package com.gyf.bos.dao.base;
 
+import com.gyf.bos.model.PageBean;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Projections;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 
@@ -15,7 +18,7 @@ public class BaseDaoImpl<T> implements IBaseDao<T>{
     private Class<T> entityClass;
 
     public BaseDaoImpl(){
-        System.out.println("共同实现类空参构造方法");
+        System.out.println("公共实现类空参构造方法");
 
         //获取泛型的真实类型
         /**
@@ -98,5 +101,38 @@ public class BaseDaoImpl<T> implements IBaseDao<T>{
 
         //执行
         query.executeUpdate();
+    }
+
+    @Override
+    public void saveAll(List<T> list) {
+        hibernateTemplate.saveOrUpdateAll(list);
+    }
+
+    @Override
+    public void pageQuery(PageBean<T> pb) {
+        //执行查询
+
+        //查询总记录数
+        // 获取离线的查询对象
+        DetachedCriteria dc = pb.getDetachedCriteria();
+
+        //select count(*) From Staff;
+        //设置查询总记录数条件
+        dc.setProjection(Projections.rowCount());
+
+        List<Long> list = hibernateTemplate.findByCriteria(dc);
+        Long total = list.get(0);
+
+        pb.setTotal(total.intValue());
+
+
+        //查询分页数据
+
+        dc.setProjection(null);   //把之前条件清空
+        //limit 0,10
+        int start = (pb.getCurrentPage() - 1) * pb.getPageSize();
+        int length = pb.getPageSize();
+        List<T> rows = hibernateTemplate.findByCriteria(dc, start, length);
+        pb.setRows(rows);
     }
 }
