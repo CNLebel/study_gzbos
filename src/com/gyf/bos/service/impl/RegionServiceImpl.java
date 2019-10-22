@@ -48,10 +48,13 @@ public class RegionServiceImpl extends BaseServiceImpl<Region> implements IRegio
     @Override
     public void saveAll(List<Region> regions) {
         regionDao.saveAll(regions);
+
     }
 
     @Override
     public void pageQuery(PageBean<Region> pb) {
         regionDao.pageQuery(pb);
     }
+
+
 }

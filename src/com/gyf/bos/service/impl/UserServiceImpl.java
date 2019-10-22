@@ -62,10 +62,4 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements IUserServi
         return userDao.findAll();
     }
 
-    @Override
-    public void pageQuery(PageBean<User> pb) {
-
-    }
-
-
 }

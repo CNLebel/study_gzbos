@@ -69,11 +69,6 @@ public class RegionAction extends BaseAction<Region> {
             region.setCitycode(citycode);
             region.setShortcode(shortcode);
             regions.add(region);
-
-            //响应
-            responseStr("success");
-
-            return NONE;
         }
 
         //移除第一行的标题数据
@@ -82,6 +77,8 @@ public class RegionAction extends BaseAction<Region> {
         //调用service
         regionService.saveAll(regions);
 
+        //响应
+        responseStr("success");
 
         return SUCCESS;
     }

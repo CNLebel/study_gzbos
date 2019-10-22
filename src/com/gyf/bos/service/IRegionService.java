@@ -10,4 +10,10 @@ public interface IRegionService extends IBaseService<Region> {
 
     public void saveAll(List<Region> regions);
 
+    /**
+     * 分布查询
+     * @param pb
+     * */
+    public void pageQuery(PageBean<Region> pb);
+
 }

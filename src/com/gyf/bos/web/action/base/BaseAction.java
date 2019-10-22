@@ -42,13 +42,9 @@ public abstract class BaseAction<T> extends ActionSupport implements ModelDriven
         //把type类型赋值给Class类型
         Class<T> clz = (Class<T>) types[0];
 
-
         //设置离线查询对象
         DetachedCriteria dc = DetachedCriteria.forClass(clz);
         pb.setDetachedCriteria(dc);
-
-
-
 
         //2.通过反射创建对象
         try {
@@ -71,8 +67,6 @@ public abstract class BaseAction<T> extends ActionSupport implements ModelDriven
     public abstract String list();
 
 
-
-
     @Override
     public T getModel() {
         return t;
@@ -91,8 +85,6 @@ public abstract class BaseAction<T> extends ActionSupport implements ModelDriven
 
         //创建json对象
         JSONObject jsonObject = JSONObject.fromObject(obj, config);
-
-        //响应
         HttpServletResponse response = ServletActionContext.getResponse();
         response.setHeader("content-Type","text/json;charset=utf-8");
         response.getWriter().write(jsonObject.toString());

@@ -16,10 +16,4 @@ public interface IBaseService<T> {
     public List<T> findAll();
 
 
-    /**
-     * 分布查询
-     * @param pb
-     * */
-    public void pageQuery(PageBean<T> pb);
-
 }
