@@ -9,6 +9,8 @@ import com.gyf.bos.model.Subarea;
 import com.gyf.bos.service.IRegionService;
 import com.gyf.bos.service.ISubareaService;
 import com.gyf.bos.service.base.BaseServiceImpl;
+import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -52,5 +54,12 @@ public class SubareaServiceImpl extends BaseServiceImpl<Subarea> implements ISub
     @Override
     public void pageQuery(PageBean<Subarea> pb) {
         subareaDao.pageQuery(pb);
+    }
+
+    @Override
+    public List<Subarea> findAllWithUnbind() {
+        DetachedCriteria dc = DetachedCriteria.forClass(Subarea.class);
+        dc.add(Restrictions.isEmpty("decidedzone"));
+        return subareaDao.findAllByDetachedCriteria(dc);
     }
 }

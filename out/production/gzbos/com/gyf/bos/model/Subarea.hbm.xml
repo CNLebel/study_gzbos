@@ -17,5 +17,8 @@
 <!--        多对一的映射-->
         <many-to-one name="region" lazy="false" class="com.gyf.bos.model.Region" column="region_id" />
 
+<!--        多对一的映射-->
+        <many-to-one name="decidedzone" lazy="false" class="com.gyf.bos.model.Decidedzone" column="decidedzone_id" />
+
     </class>
 </hibernate-mapping>

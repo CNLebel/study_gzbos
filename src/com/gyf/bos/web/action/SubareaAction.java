@@ -145,4 +145,12 @@ public class SubareaAction extends BaseAction<Subarea> {
         OutputStream os = response.getOutputStream();
         workbook.write(os);
     }
+
+    public void listJson() throws IOException {
+
+        //示绑定的分区数据[也就是这个分区没有指派一个员工负责]
+        List<Subarea> list = subareaService.findAllWithUnbind();
+        responseJson(list, new String[]{"decidedzone", "region"});
+
+    }
 }

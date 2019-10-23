@@ -5,6 +5,8 @@ import com.gyf.bos.model.Region;
 import com.gyf.bos.model.Staff;
 import com.gyf.bos.service.base.IBaseService;
 
+import java.util.List;
+
 public interface IStaffService extends IBaseService<Staff> {
 
 
@@ -16,8 +18,12 @@ public interface IStaffService extends IBaseService<Staff> {
 
 
     /**
-     * 分布查询
+     * 分页查询
      * @param pb
      * */
     public void pageQuery(PageBean<Staff> pb);
+
+
+    public List<Staff> findAllWithNoDelete();
+
 }

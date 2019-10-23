@@ -68,6 +68,11 @@ public class BaseDaoImpl<T> implements IBaseDao<T>{
     }
 
     @Override
+    public List<T> findAllByDetachedCriteria(DetachedCriteria dc) {
+        return this.hibernateTemplate.findByCriteria(dc);
+    }
+
+    @Override
     public void executeUpdate(String hql, Object... objs) {
 
         //获取session

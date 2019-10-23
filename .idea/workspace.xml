@@ -7,15 +7,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6105c649-c0d6-4bd4-a4f8-8518e1bd34c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/IDecidedzoneDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/impl/DecidedzoneDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/IDecidedzoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/DecidedzoneServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/web/action/DecidedzoneAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/struts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/dao/base/BaseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/dao/base/BaseDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/dao/base/IBaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/dao/base/IBaseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Decidedzone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Decidedzone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Decidedzone.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Decidedzone.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Subarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Subarea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Subarea.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Subarea.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/IStaffService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/IStaffService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/ISubareaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/ISubareaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/impl/StaffServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/impl/StaffServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/impl/SubareaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/impl/SubareaServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/StaffAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/StaffAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/SubareaAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/SubareaAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/struts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/base/BaseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/base/BaseDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/base/IBaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/base/IBaseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Decidedzone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Decidedzone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Decidedzone.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Decidedzone.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Subarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Subarea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Subarea.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Subarea.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/IStaffService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/IStaffService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/ISubareaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/ISubareaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/impl/StaffServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/impl/StaffServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/impl/SubareaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/impl/SubareaServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/StaffAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/StaffAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/SubareaAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/SubareaAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/struts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/BaseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/BaseDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/IBaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/IBaseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/model/Decidedzone.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/Decidedzone.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/model/Decidedzone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/Decidedzone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/model/Subarea.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/Subarea.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/model/Subarea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/Subarea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/service/IStaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/IStaffService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/service/ISubareaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/ISubareaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/StaffServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/StaffServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/SubareaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/SubareaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/web/action/StaffAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/web/action/StaffAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/web/action/SubareaAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/web/action/SubareaAction.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -110,10 +145,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.gyf.bos.service.impl" />
-      <recent name="com.gyf.bos.service" />
-      <recent name="com.gyf.bos.dao.impl" />
       <recent name="com.gyf.bos.web.action" />
+      <recent name="com.gyf.bos.service.impl" />
+      <recent name="com.gyf.bos.dao.impl" />
+      <recent name="com.gyf.bos.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\LiTong\Learn\studyjava\gzbos\web\WEB-INF\lib" />
@@ -353,7 +388,7 @@
       <workItem from="1571616725467" duration="7102000" />
       <workItem from="1571654610829" duration="4322000" />
       <workItem from="1571726280225" duration="11459000" />
-      <workItem from="1571788834075" duration="10629000" />
+      <workItem from="1571788834075" duration="20526000" />
     </task>
     <task id="LOCAL-00001" summary="20191017:13.09">
       <created>1571288991005</created>
