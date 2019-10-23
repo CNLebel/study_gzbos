@@ -13,6 +13,10 @@ public class Subarea {
     private String single;
     private String position;
 
+    public String getSubareaId(){
+        return id;
+    }
+
     // 定区
     public Decidedzone getDecidedzone() {
         return decidedzone;

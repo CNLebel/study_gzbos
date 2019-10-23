@@ -10,6 +10,6 @@
         </id>
         <property name="name" column="name"/>
 
-        <many-to-one name="staff" column="staff_id" class="com.gyf.bos.model.Staff" />
+        <many-to-one lazy="false" name="staff" column="staff_id" class="com.gyf.bos.model.Staff" />
     </class>
 </hibernate-mapping>
