@@ -3,6 +3,7 @@ package com.gyf.bos.web.action.base;
 import com.gyf.bos.model.PageBean;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.JsonConfig;
 import org.apache.poi.ss.formula.functions.T;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.util.Collection;
 
 public abstract class BaseAction<T> extends ActionSupport implements ModelDriven<T> {
     private T t;  //属性-用于接收参数
@@ -84,10 +86,18 @@ public abstract class BaseAction<T> extends ActionSupport implements ModelDriven
         config.setExcludes(excludes);
 
         //创建json对象
-        JSONObject jsonObject = JSONObject.fromObject(obj, config);
+
         HttpServletResponse response = ServletActionContext.getResponse();
         response.setHeader("content-Type","text/json;charset=utf-8");
-        response.getWriter().write(jsonObject.toString());
+
+        if(obj instanceof Collection){
+            JSONArray jsonArray = JSONArray.fromObject(obj, config);
+            response.getWriter().write(jsonArray.toString());
+        } else{
+            JSONObject jsonObject = JSONObject.fromObject(obj, config);
+            response.getWriter().write(jsonObject.toString());
+        }
+
     }
 
     public void responseStr(String message) throws IOException {

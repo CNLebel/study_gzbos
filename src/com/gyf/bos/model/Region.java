@@ -1,6 +1,8 @@
 package com.gyf.bos.model;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 public class Region {
     private String id;
@@ -10,6 +12,21 @@ public class Region {
     private String postcode;
     private String shortcode;
     private String citycode;
+
+    // 一个区域对应多个分区
+    private Set<Subarea> subareas = new HashSet<Subarea>();
+
+    public Set<Subarea> getSubareas() {
+        return subareas;
+    }
+
+    public void setSubareas(Set<Subarea> subareas) {
+        this.subareas = subareas;
+    }
+
+    public String getName(){
+        return province + city + district;
+    }
 
     public String getId() {
         return id;
@@ -86,6 +103,8 @@ public class Region {
                 ", city='" + city + '\'' +
                 ", district='" + district + '\'' +
                 ", postcode='" + postcode + '\'' +
+                ", shortcode='" + shortcode + '\'' +
+                ", citycode='" + citycode + '\'' +
                 '}';
     }
 }

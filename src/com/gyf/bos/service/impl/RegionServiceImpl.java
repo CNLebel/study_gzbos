@@ -42,7 +42,7 @@ public class RegionServiceImpl extends BaseServiceImpl<Region> implements IRegio
 
     @Override
     public List<Region> findAll() {
-        return null;
+        return  regionDao.findAll();
     }
 
     @Override

@@ -5,11 +5,17 @@
 <hibernate-mapping>
 
     <class name="com.gyf.bos.model.Subarea" table="bc_subarea" schema="gzbos">
-        <id name="id" column="id"/>
+        <id name="id" column="id">
+            <generator class="assigned"></generator>
+        </id>
         <property name="addresskey" column="addresskey"/>
         <property name="startnum" column="startnum"/>
         <property name="endnum" column="endnum"/>
         <property name="single" column="single"/>
         <property name="position" column="position"/>
+
+<!--        多对一的映射-->
+        <many-to-one name="region" lazy="false" class="com.gyf.bos.model.Region" column="region_id" />
+
     </class>
 </hibernate-mapping>

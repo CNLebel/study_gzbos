@@ -126,7 +126,16 @@ public class RegionAction extends BaseAction<Region> {
         regionService.pageQuery(pb);
 
         //返回json数据
-        responseJson(pb, new String[]{"currentPage","pageSize","detachedCriteria"});
+        responseJson(pb, new String[]{"currentPage","pageSize","detachedCriteria","subareas"});
+
+    }
+
+    public void listJson() throws IOException {
+        // 查询所有区域
+        List<Region> regions = regionService.findAll();
+
+        // 返回json数据
+        responseJson(regions, new String[]{"subareas"});
 
     }
 }
