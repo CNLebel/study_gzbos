@@ -46,7 +46,7 @@ public class SubareaServiceImpl extends BaseServiceImpl<Subarea> implements ISub
 
     @Override
     public List<Subarea> findAll() {
-        return null;
+        return subareaDao.findAll();
     }
 
     @Override

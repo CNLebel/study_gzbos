@@ -5,6 +5,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 
@@ -129,6 +130,8 @@ public class BaseDaoImpl<T> implements IBaseDao<T>{
         //查询分页数据
 
         dc.setProjection(null);   //把之前条件清空
+        dc.setResultTransformer(DetachedCriteria.ROOT_ENTITY);      // 重置hql
+
         //limit 0,10
         int start = (pb.getCurrentPage() - 1) * pb.getPageSize();
         int length = pb.getPageSize();

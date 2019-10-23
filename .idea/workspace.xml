@@ -7,36 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6105c649-c0d6-4bd4-a4f8-8518e1bd34c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/ISubareaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/impl/SubareaDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/ISubareaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/SubareaServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/web/action/SubareaAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/struts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Region.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Region.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Region.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Region.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Subarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Subarea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Subarea.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Subarea.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/impl/RegionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/impl/RegionServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/RegionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/RegionAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/base/BaseAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/base/BaseAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/struts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Region.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Region.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Region.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Region.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Subarea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Subarea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Subarea.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Subarea.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/impl/RegionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/impl/RegionServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/RegionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/RegionAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/base/BaseAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/base/BaseAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/struts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/model/Region.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/Region.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/model/Region.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/Region.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/model/Subarea.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/Subarea.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/model/Subarea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/Subarea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/RegionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/RegionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/web/action/RegionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/web/action/RegionAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/web/action/base/BaseAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/web/action/base/BaseAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/dao/base/BaseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/dao/base/BaseDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/impl/SubareaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/impl/SubareaServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/SubareaAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/SubareaAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/base/BaseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/dao/base/BaseDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/impl/SubareaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/impl/SubareaServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/SubareaAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/SubareaAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/BaseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/base/BaseDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/SubareaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/SubareaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/web/action/SubareaAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/web/action/SubareaAction.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -373,7 +353,7 @@
       <workItem from="1571616725467" duration="7102000" />
       <workItem from="1571654610829" duration="4322000" />
       <workItem from="1571726280225" duration="11459000" />
-      <workItem from="1571788834075" duration="4795000" />
+      <workItem from="1571788834075" duration="10629000" />
     </task>
     <task id="LOCAL-00001" summary="20191017:13.09">
       <created>1571288991005</created>
