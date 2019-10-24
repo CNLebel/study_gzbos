@@ -57,7 +57,12 @@
 
 <!--        定区模块-->
         <action name="decidedzoneAction_*" class="com.gyf.bos.web.action.DecidedzoneAction" method="{1}">
-<!--            <result name="success">/WEB-INF/pages/base/subarea.jsp</result>-->
+            <result name="success">/WEB-INF/pages/base/decidedzone.jsp</result>
+        </action>
+
+<!--        业务通知单-->
+        <action name="noticebillAction_*" class="com.gyf.bos.web.action.NoticebillAction" method="{1}">
+<!--            <result name="success">/WEB-INF/pages/base/decidedzone.jsp</result>-->
         </action>
 
     </package>

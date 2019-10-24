@@ -12,8 +12,7 @@ import java.io.IOException;
 
 public class UserAction extends BaseAction<User> {
 
-    @Autowired
-    private IUserService userService;
+
 
 
     public String login(){
@@ -30,7 +29,7 @@ public class UserAction extends BaseAction<User> {
             //判断登录状态
             if(user != null){
                 System.out.println("登录成功");
-                ServletActionContext.getRequest().getSession().setAttribute("loginUser",user);
+//                ServletActionContext.getRequest().getSession().setAttribute("loginUser",user);
                 return "home";  //主页
             } else {
                 addActionError("登录失败， 用户名密码不正确");

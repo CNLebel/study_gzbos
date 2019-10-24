@@ -6,6 +6,8 @@ import com.gyf.bos.service.IDecidedzoneService;
 import com.gyf.bos.service.IRegionService;
 import com.gyf.bos.utils.PinYin4jUtils;
 import com.gyf.bos.web.action.base.BaseAction;
+import com.gyf.crm.domain.Customer;
+import com.gyf.crm.service.CustomerService;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Row;
@@ -30,8 +32,7 @@ public class DecidedzoneAction extends BaseAction<Decidedzone> {
         this.subareaId = subareaId;
     }
 
-    @Autowired
-    private IDecidedzoneService decidedzoneService;
+
 
     @Override
     public String save() {
@@ -68,4 +69,40 @@ public class DecidedzoneAction extends BaseAction<Decidedzone> {
         //返回json数据
         responseJson(pb, new String[]{"currentPage","pageSize","detachedCriteria"});
     }
+
+
+    //未关联定区客户信息
+    public void findhasassociationCustomers() throws IOException {
+        List<Customer> list = customerService.findhasassociationCustomers(getModel().getId());
+        System.out.println(list);
+        responseJson(list, new String[]{});
+    }
+
+    public void findnoassociationCustomers() throws IOException {
+        List<Customer> list = customerService.findnoassociationCustomers();
+        responseJson(list, new String[]{});
+    }
+
+    private Integer[] customerIds;
+
+    public Integer[] getCustomerIds() {
+        return customerIds;
+    }
+
+    public void setCustomerIds(Integer[] customerIds) {
+        this.customerIds = customerIds;
+    }
+
+    public String assigncustomerstodecidedzone(){
+
+        // 1.一个是客户id数组和定区的id
+        // 2.远程调用
+        customerService.assignCustomersToDecidedZone(customerIds,getModel().getId());
+
+        return SUCCESS;
+
+    }
+
+
+
 }

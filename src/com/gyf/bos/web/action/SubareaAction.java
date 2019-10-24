@@ -28,8 +28,7 @@ import java.util.List;
 
 public class SubareaAction extends BaseAction<Subarea> {
 
-    @Autowired
-    private ISubareaService subareaService;
+
 
     @Override
     public String save() {

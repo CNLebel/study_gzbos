@@ -17,8 +17,7 @@ import java.util.List;
 
 public class StaffAction extends BaseAction<Staff> {
 
-    @Autowired
-    private IStaffService staffServce;
+
 
 
     @Override
