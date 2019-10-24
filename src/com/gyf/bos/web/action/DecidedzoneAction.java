@@ -40,7 +40,7 @@ public class DecidedzoneAction extends BaseAction<Decidedzone> {
         // 调用service
         decidedzoneService.save(getModel(), subareaId);
 
-        return null;
+        return SUCCESS;
     }
 
     @Override

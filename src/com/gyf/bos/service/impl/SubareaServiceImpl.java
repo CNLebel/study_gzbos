@@ -59,7 +59,7 @@ public class SubareaServiceImpl extends BaseServiceImpl<Subarea> implements ISub
     @Override
     public List<Subarea> findAllWithUnbind() {
         DetachedCriteria dc = DetachedCriteria.forClass(Subarea.class);
-        dc.add(Restrictions.isEmpty("decidedzone"));
+        dc.add(Restrictions.isNull("decidedzone"));
         return subareaDao.findAllByDetachedCriteria(dc);
     }
 }

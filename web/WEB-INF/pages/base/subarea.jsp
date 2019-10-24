@@ -147,7 +147,7 @@
 		align : 'center'
 	} ] ];
 
-	//获取表彰的数据
+	//获取表单的数据
     function getFormData(formId) {
         var form = document.getElementById(formId);
         var data = {};
@@ -213,10 +213,6 @@
 
 			//2.调用grid的load方法
 			$("#grid").datagrid('load',data);
-
-
-
-
 
 		});
 		

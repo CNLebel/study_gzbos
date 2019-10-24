@@ -12,5 +12,5 @@ public interface ISubareaService extends IBaseService<Subarea> {
 
     public void pageQuery(PageBean<Subarea> pb);
 
-    public  List<Subarea> findAllWithUnbind();
+    public List<Subarea> findAllWithUnbind();
 }

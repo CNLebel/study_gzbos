@@ -17,7 +17,13 @@ public class Subarea {
         return id;
     }
 
+
     // 定区
+    private Decidedzone decidedzone;
+
+    // 区域
+    private Region region;  //多对一
+
     public Decidedzone getDecidedzone() {
         return decidedzone;
     }
@@ -25,11 +31,6 @@ public class Subarea {
     public void setDecidedzone(Decidedzone decidedzone) {
         this.decidedzone = decidedzone;
     }
-
-    private Decidedzone decidedzone;
-
-    // 区域
-    private Region region;  //多对一
 
     public Region getRegion() {
         return region;

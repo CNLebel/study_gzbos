@@ -50,7 +50,7 @@
             <result name="success">/WEB-INF/pages/base/region.jsp</result>
         </action>
 
-<!--        区域模块-->
+<!--        分区模块-->
         <action name="subareaAction_*" class="com.gyf.bos.web.action.SubareaAction" method="{1}">
             <result name="success">/WEB-INF/pages/base/subarea.jsp</result>
         </action>
