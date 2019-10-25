@@ -5,19 +5,19 @@ import java.util.Objects;
 
 public class Workordermanage {
     private String id;
-    private String arrivecity;
-    private String product;
-    private Integer num;
-    private Double weight;
+    private String arrivecity;      //到达城市
+    private String product;     //商品
+    private Integer num;    //数量
+    private Double weight;      //重量
     private String floadreqr;
     private String prodtimelimit;
     private String prodtype;
-    private String sendername;
-    private String senderphone;
-    private String senderaddr;
-    private String receivername;
-    private String receiverphone;
-    private String receiveraddr;
+    private String sendername;      //发件人名字
+    private String senderphone;     //发件人电话
+    private String senderaddr;      //发件人地址
+    private String receivername;    //收件人名字
+    private String receiverphone;     //收件人电话
+    private String receiveraddr;     //收件人地址
     private Integer feeitemnum;
     private Double actlweit;
     private String vol;
@@ -176,34 +176,5 @@ public class Workordermanage {
         this.updatetime = updatetime;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Workordermanage that = (Workordermanage) o;
-        return Objects.equals(id, that.id) &&
-                Objects.equals(arrivecity, that.arrivecity) &&
-                Objects.equals(product, that.product) &&
-                Objects.equals(num, that.num) &&
-                Objects.equals(weight, that.weight) &&
-                Objects.equals(floadreqr, that.floadreqr) &&
-                Objects.equals(prodtimelimit, that.prodtimelimit) &&
-                Objects.equals(prodtype, that.prodtype) &&
-                Objects.equals(sendername, that.sendername) &&
-                Objects.equals(senderphone, that.senderphone) &&
-                Objects.equals(senderaddr, that.senderaddr) &&
-                Objects.equals(receivername, that.receivername) &&
-                Objects.equals(receiverphone, that.receiverphone) &&
-                Objects.equals(receiveraddr, that.receiveraddr) &&
-                Objects.equals(feeitemnum, that.feeitemnum) &&
-                Objects.equals(actlweit, that.actlweit) &&
-                Objects.equals(vol, that.vol) &&
-                Objects.equals(managerCheck, that.managerCheck) &&
-                Objects.equals(updatetime, that.updatetime);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, arrivecity, product, num, weight, floadreqr, prodtimelimit, prodtype, sendername, senderphone, senderaddr, receivername, receiverphone, receiveraddr, feeitemnum, actlweit, vol, managerCheck, updatetime);
-    }
 }

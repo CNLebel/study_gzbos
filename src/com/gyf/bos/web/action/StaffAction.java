@@ -6,6 +6,7 @@ import com.gyf.bos.service.IStaffService;
 import com.gyf.bos.web.action.base.BaseAction;
 import net.sf.json.JSONObject;
 import net.sf.json.JsonConfig;
+import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 import org.hibernate.criterion.DetachedCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,12 +18,13 @@ import java.util.List;
 
 public class StaffAction extends BaseAction<Staff> {
 
-
-
+    Logger logger = Logger.getLogger(StaffAction.class);
 
     @Override
     public String save() {
-        System.out.println(getModel());
+
+        logger.info(getModel());
+
         staffServce.save(getModel());
         return SUCCESS;
     }

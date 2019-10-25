@@ -65,6 +65,12 @@
 <!--            <result name="success">/WEB-INF/pages/base/decidedzone.jsp</result>-->
         </action>
 
+        <!--        业务通知单-->
+        <action name="workordermanageAction_*" class="com.gyf.bos.web.action.WorkordermanageAction" method="{1}">
+<!--            <result name="success">/WEB-INF/pages/base/decidedzone.jsp</result>-->
+        </action>
+
+
     </package>
 
 

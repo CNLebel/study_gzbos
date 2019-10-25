@@ -5,13 +5,32 @@ import java.util.Objects;
 
 public class Workbill {
     private String id;
-    private String noticebillId;
     private String type;
     private String pickstate;
     private Timestamp buildtime;
     private Integer attachbilltimes;
     private String remark;
-    private String staffId;
+
+    private Staff staff;
+
+    public Staff getStaff() {
+        return staff;
+    }
+
+    public void setStaff(Staff staff) {
+        this.staff = staff;
+    }
+
+    //业务通知单模型
+    private Noticebill noticebill;
+
+    public Noticebill getNoticebill() {
+        return noticebill;
+    }
+
+    public void setNoticebill(Noticebill noticebill) {
+        this.noticebill = noticebill;
+    }
 
     public String getId() {
         return id;
@@ -19,14 +38,6 @@ public class Workbill {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getNoticebillId() {
-        return noticebillId;
-    }
-
-    public void setNoticebillId(String noticebillId) {
-        this.noticebillId = noticebillId;
     }
 
     public String getType() {
@@ -69,31 +80,7 @@ public class Workbill {
         this.remark = remark;
     }
 
-    public String getStaffId() {
-        return staffId;
-    }
 
-    public void setStaffId(String staffId) {
-        this.staffId = staffId;
-    }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Workbill workbill = (Workbill) o;
-        return Objects.equals(id, workbill.id) &&
-                Objects.equals(noticebillId, workbill.noticebillId) &&
-                Objects.equals(type, workbill.type) &&
-                Objects.equals(pickstate, workbill.pickstate) &&
-                Objects.equals(buildtime, workbill.buildtime) &&
-                Objects.equals(attachbilltimes, workbill.attachbilltimes) &&
-                Objects.equals(remark, workbill.remark) &&
-                Objects.equals(staffId, workbill.staffId);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, noticebillId, type, pickstate, buildtime, attachbilltimes, remark, staffId);
-    }
 }

@@ -3,6 +3,7 @@ package com.gyf.bos.web.action;
 import com.gyf.bos.model.User;
 import com.gyf.bos.service.IUserService;
 import com.gyf.bos.web.action.base.BaseAction;
+import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -12,10 +13,16 @@ import java.io.IOException;
 
 public class UserAction extends BaseAction<User> {
 
-
-
+    //创建了一个日志对象
+    Logger logger = Logger.getLogger(UserAction.class);
 
     public String login(){
+
+        logger.info(getModel());
+        logger.warn(getModel());
+        logger.error(getModel());
+
+        // 获取参数
         String username = getModel().getUsername();
         String password = getModel().getPassword();
 
