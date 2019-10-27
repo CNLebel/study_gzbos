@@ -7,6 +7,7 @@ import com.gyf.bos.web.action.base.BaseAction;
 import net.sf.json.JSONObject;
 import net.sf.json.JsonConfig;
 import org.apache.log4j.Logger;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.struts2.ServletActionContext;
 import org.hibernate.criterion.DetachedCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ public class StaffAction extends BaseAction<Staff> {
 
     Logger logger = Logger.getLogger(StaffAction.class);
 
+//    @RequiresPermissions("staff")
     @Override
     public String save() {
 

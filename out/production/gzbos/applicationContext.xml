@@ -59,7 +59,49 @@
 <!--    配置远程调用的service-->
     <bean id="customerService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
         <property name="serviceInterface" value="com.gyf.crm.service.CustomerService" />
-        <property name="serviceUrl" value="http://localhost:8080/crm/remoting/customer" />
+        <property name="serviceUrl" value="http://104.225.151.222:8080/crm/remoting/customer" />
     </bean>
+
+<!--    配置shiro相关内容-->
+
+<!--    配置id为shiroFilter的工厂bean
+        注意：id的名字要与过滤器中配置的一样
+-->
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+<!--        配置登录页面-->
+        <property name="loginUrl" value="/login.jsp" />
+<!--        配置拦截规则-->
+        <property name="filterChainDefinitions">
+            <value>
+                /validatecode.jsp* =anon
+                /userAction_login = anon
+                /page_base_staff.action = perms["staff]
+                /* = authc
+            </value>
+        </property>
+
+
+    </bean>
+
+
+<!--    配置shiro的安全管理者-->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="realm" ref="realm" />
+    </bean>
+
+<!--    配置一个realm对象，这个对象要自己实现一个实现类，实现抽象类AuthorizingRealm-->
+    <bean id="realm" class="com.gyf.bos.web.realm.BOSRealm"></bean>
+
+<!--&lt;!&ndash;    如果需要使用注解来配置权限，需要声明一个代理和切面&ndash;&gt;-->
+<!--    <bean id="defaultAdvisorAutoProxyCreator" class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">-->
+<!--&lt;!&ndash;        使用CGLIB实现代理&ndash;&gt;-->
+<!--        <property name="proxyTargetClass" value="true"></property>-->
+<!--    </bean>-->
+
+<!--    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor"> </bean>-->
+
+<!--&lt;!&ndash;    配置Action&ndash;&gt;-->
+<!--    <bean class="com.gyf.bos.web.action.StaffAction" scope="prototype"></bean>-->
 
 </beans>

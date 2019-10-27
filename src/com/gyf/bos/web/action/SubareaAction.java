@@ -102,7 +102,7 @@ public class SubareaAction extends BaseAction<Subarea> {
          * */
 
         //返回json数据
-        responseJson(pb, new String[]{"currentPage","pageSize","detachedCriteria","subareas"});
+        responseJson(pb, new String[]{"currentPage","pageSize","detachedCriteria","subareas","decidedzone"});
     }
 
     // 导出表格[下载一个xls文件]

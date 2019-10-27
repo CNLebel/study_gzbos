@@ -29,4 +29,15 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements IUserDao {
 
         return null;
     }
+
+    @Override
+    public User findByUsername(String username) {
+
+        String hql = "FROM User WHERE username = ?";
+        List<User> list =  hibernateTemplate.find(hql, username);
+        if(list.size() == 1){
+            return list.get(0);
+        }
+        return null;
+    }
 }

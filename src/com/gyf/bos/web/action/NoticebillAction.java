@@ -47,7 +47,7 @@ public class NoticebillAction extends BaseAction<Noticebill>{
 //        System.out.println(getModel());
         noticebillService.save(getModel(), decidedzoneId);
 
-        return NONE;
+        return SUCCESS;
     }
 
     @Override

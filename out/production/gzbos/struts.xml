@@ -9,26 +9,33 @@
 
     <package name="p1" extends="struts-default">
 
-<!--        声明一个登录拦截器-->
-        <interceptors>
-            <interceptor name="BOSLoginInterceptor" class="com.gyf.bos.web.interceptor.BOSLoginInterceptor">
-                <param name="excludeMethods">login</param>
-            </interceptor>
+<!--&lt;!&ndash;        声明一个登录拦截器&ndash;&gt;-->
+<!--        <interceptors>-->
+<!--            <interceptor name="BOSLoginInterceptor" class="com.gyf.bos.web.interceptor.BOSLoginInterceptor">-->
+<!--                <param name="excludeMethods">login</param>-->
+<!--            </interceptor>-->
 
-<!--            声明一个拦截器栈-->
-            <interceptor-stack name="myDefaultStack">
-<!--                <interceptor-ref name="BOSLoginInterceptor" />-->
-                <interceptor-ref name="defaultStack" />
-            </interceptor-stack>
-        </interceptors>
+<!--&lt;!&ndash;            声明一个拦截器栈&ndash;&gt;-->
+<!--            <interceptor-stack name="myDefaultStack">-->
+<!--&lt;!&ndash;                <interceptor-ref name="BOSLoginInterceptor" />&ndash;&gt;-->
+<!--                <interceptor-ref name="defaultStack" />-->
+<!--            </interceptor-stack>-->
+<!--        </interceptors>-->
 
 <!--        修改struts默认拦截器-->
-        <default-interceptor-ref name="myDefaultStack" />
+<!--        <default-interceptor-ref name="myDefaultStack" />-->
+
 
 <!--        配置全局的结果视图-->
         <global-results>
             <result name="login" type="redirect">/login.jsp</result>
+            <result name="unauthorizedUrl" type="redirect">authorizing.jsp</result>
         </global-results>
+
+        <!--        抛出具体异常来到指定页面-->
+        <global-exception-mappings>
+            <exception-mapping exception="org.apache.shiro.authz.UnauthorizedException" result="unauthorizedUrl"></exception-mapping>
+        </global-exception-mappings>
 
         <action name="page_*_*">
             <result name="success">/WEB-INF/pages/{1}/{2}.jsp</result>
@@ -68,6 +75,11 @@
         <!--        业务通知单-->
         <action name="workordermanageAction_*" class="com.gyf.bos.web.action.WorkordermanageAction" method="{1}">
 <!--            <result name="success">/WEB-INF/pages/base/decidedzone.jsp</result>-->
+        </action>
+
+<!--        -->
+        <action name="functionAction_*" class="com.gyf.bos.web.action.FunctionAction" method="{1}">
+
         </action>
 
 
