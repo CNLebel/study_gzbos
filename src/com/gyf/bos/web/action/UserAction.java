@@ -4,6 +4,7 @@ import com.gyf.bos.model.User;
 import com.gyf.bos.service.IUserService;
 import com.gyf.bos.utils.MD5Utils;
 import com.gyf.bos.web.action.base.BaseAction;
+import org.activiti.engine.RepositoryService;
 import org.apache.log4j.Logger;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -20,11 +21,14 @@ public class UserAction extends BaseAction<User> {
     //创建了一个日志对象
     Logger logger = Logger.getLogger(UserAction.class);
 
+    @Autowired
+    private RepositoryService rs;
+
     public String login(){
 
         logger.info(getModel());
-        logger.warn(getModel());
-        logger.error(getModel());
+
+        System.out.println(rs);
 
         // 获取参数
         String username = getModel().getUsername();

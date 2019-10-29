@@ -82,6 +82,10 @@
 
         </action>
 
+<!--        流程定义模块-->
+        <action name="processDefinitionAction_*" class="com.gyf.bos.web.action.ProcessDefinitionAction" method="{1}">
+            <result name="list">/WEB-INF/pages/workflow/processdefinition_list.jsp</result>
+        </action>
 
     </package>
 
