@@ -1,5 +1,6 @@
 package com.gyf.bos.web.action;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import org.activiti.engine.RepositoryService;
 import org.activiti.engine.repository.DeploymentBuilder;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.List;
 import java.util.zip.ZipInputStream;
 
@@ -68,6 +70,25 @@ public class ProcessDefinitionAction extends ActionSupport {
         list = query.list();
 
         return "list";
+    }
+
+    /**
+     * 显示流程图
+     * @return
+     * */
+    private String id;
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String viewpng(){
+
+        InputStream imgIs =  rs.getProcessDiagram(id);
+
+        ActionContext.getContext().getValueStack().set("imgIS", imgIs);
+
+        return "viewpng";
     }
 
 }

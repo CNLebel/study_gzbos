@@ -7,49 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6105c649-c0d6-4bd4-a4f8-8518e1bd34c5" name="Default Changelist" comment="20191017:13.09">
-      <change afterPath="$PROJECT_DIR$/config/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/IWorkbilDaol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/IWorkordermanageDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/impl/WorkbillDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/dao/impl/WorkordermanageDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/IWorkordermanageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/WordordermanageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/web/action/WorkordermanageAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/test/dome04.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/struts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Workbill.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Workbill.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Workbill.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Workbill.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Workordermanage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/model/Workordermanage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/base/BaseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/base/BaseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/impl/NoticebillServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/service/impl/NoticebillServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/UserAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/UserAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/base/BaseAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/base/BaseAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/struts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Workbill.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Workbill.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Workbill.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Workbill.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Workordermanage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/model/Workordermanage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/base/BaseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/base/BaseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/impl/NoticebillServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/service/impl/NoticebillServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/UserAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/UserAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/base/BaseAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/base/BaseAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gzbos/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/struts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/model/Workbill.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/Workbill.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/model/Workbill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/Workbill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/model/Workordermanage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/model/Workordermanage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/service/base/BaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/base/BaseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/NoticebillServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/service/impl/NoticebillServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/web/action/StaffAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/web/action/StaffAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/web/action/UserAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/web/action/UserAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/web/action/base/BaseAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/web/action/base/BaseAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/web/action/ProcessDefinitionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/web/action/ProcessDefinitionAction.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -111,6 +81,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1SGjVSEE7fZA5vU1sUQlQwHzO5h" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -123,7 +96,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -416,8 +389,8 @@
       <item itemvalue="JUnit.dome01.test" />
       <item itemvalue="JUnit.dome02" />
       <item itemvalue="JUnit.dome04.test1" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.45" />
       <item itemvalue="JUnit.dome04" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.45" />
     </list>
     <recent_temporary>
       <list>
@@ -437,12 +410,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6dc93e83" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@9082a553" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6dc93e83" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e28e9bb1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@9082a553" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@eebb25cd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -470,7 +443,10 @@
       <workItem from="1571788834075" duration="22646000" />
       <workItem from="1571877560842" duration="1436000" />
       <workItem from="1571898442295" duration="12452000" />
-      <workItem from="1571962592902" duration="8790000" />
+      <workItem from="1571962592902" duration="11353000" />
+      <workItem from="1572222536012" duration="1246000" />
+      <workItem from="1572229619079" duration="33000" />
+      <workItem from="1572394902016" duration="1768000" />
     </task>
     <task id="LOCAL-00001" summary="20191017:13.09">
       <created>1571288991005</created>
