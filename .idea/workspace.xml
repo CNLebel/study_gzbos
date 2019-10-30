@@ -7,10 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6105c649-c0d6-4bd4-a4f8-8518e1bd34c5" name="Default Changelist" comment="20191017:13.09">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/gyf/bos/web/action/ProcessInstanceAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/test/Dome05.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/ProcessDefinitionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/com/gyf/bos/web/action/ProcessDefinitionAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/classes/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/pages/workflow/processdefinition_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/gzbos_war_exploded/WEB-INF/pages/workflow/processdefinition_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/ProcessDefinitionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/com/gyf/bos/web/action/ProcessDefinitionAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gzbos/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gzbos/struts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gyf/bos/web/action/ProcessDefinitionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gyf/bos/web/action/ProcessDefinitionAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/pages/workflow/processdefinition_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/pages/workflow/processdefinition_list.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,8 +66,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -233,7 +240,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.45">
+  <component name="RunManager" selected="JUnit.Dome05.test">
     <configuration name="PinYin4jUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.gyf.bos.utils.PinYin4jUtils" />
       <module name="gzbos" />
@@ -247,7 +254,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="dome01.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Dome05.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gzbos" />
       <extension name="coverage">
         <pattern>
@@ -256,7 +263,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.test" />
-      <option name="MAIN_CLASS_NAME" value="com.test.dome01" />
+      <option name="MAIN_CLASS_NAME" value="com.test.Dome05" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -322,7 +329,8 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_45_gzbos" />
-        <option name="HTTP_PORT" value="8090" />
+        <option name="HTTP_PORT" value="8070" />
+        <option name="JNDI_PORT" value="1098" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -386,19 +394,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.PinYin4jUtils" />
-      <item itemvalue="JUnit.dome01.test" />
       <item itemvalue="JUnit.dome02" />
       <item itemvalue="JUnit.dome04.test1" />
       <item itemvalue="JUnit.dome04" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.45" />
+      <item itemvalue="JUnit.Dome05.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Dome05.test" />
         <item itemvalue="JUnit.dome04.test1" />
         <item itemvalue="JUnit.dome04" />
         <item itemvalue="Application.PinYin4jUtils" />
         <item itemvalue="JUnit.dome02" />
-        <item itemvalue="JUnit.dome01.test" />
       </list>
     </recent_temporary>
   </component>
@@ -410,12 +418,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@9082a553" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3bbbaecd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@9082a553" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@eebb25cd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3bbbaecd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@df8dd21f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -446,7 +454,9 @@
       <workItem from="1571962592902" duration="11353000" />
       <workItem from="1572222536012" duration="1246000" />
       <workItem from="1572229619079" duration="33000" />
-      <workItem from="1572394902016" duration="1768000" />
+      <workItem from="1572394902016" duration="2036000" />
+      <workItem from="1572424826784" duration="125000" />
+      <workItem from="1572425012693" duration="4792000" />
     </task>
     <task id="LOCAL-00001" summary="20191017:13.09">
       <created>1571288991005</created>

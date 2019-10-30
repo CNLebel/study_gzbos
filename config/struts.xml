@@ -91,6 +91,11 @@
             </result>
         </action>
 
+<!--        流程实例-->
+        <action name="processInstanceAction_*" class="com.gyf.bos.web.action.ProcessInstanceAction" method="{1}">
+            <result name="list">/WEB-INF/pages/workflow/processinstance.jsp</result>
+        </action>
+
     </package>
 
 

@@ -6,12 +6,10 @@ import org.activiti.engine.RepositoryService;
 import org.activiti.engine.repository.DeploymentBuilder;
 import org.activiti.engine.repository.ProcessDefinition;
 import org.activiti.engine.repository.ProcessDefinitionQuery;
+import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.List;
 import java.util.zip.ZipInputStream;
 
@@ -90,5 +88,19 @@ public class ProcessDefinitionAction extends ActionSupport {
 
         return "viewpng";
     }
+
+    public void del() throws IOException {
+        //先根据流程定义id查询部署id
+        ProcessDefinitionQuery query =  rs.createProcessDefinitionQuery();
+        query.processDefinitionId(id);
+
+        ProcessDefinition pd = query.singleResult();
+
+        String deploymentId = pd.getDeploymentId();
+        rs.deleteDeployment(deploymentId);
+
+        ServletActionContext.getResponse().getWriter().write("success");
+    }
+
 
 }

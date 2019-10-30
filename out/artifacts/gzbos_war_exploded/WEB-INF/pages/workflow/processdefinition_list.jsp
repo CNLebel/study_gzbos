@@ -75,7 +75,28 @@
   						<s:a action="processDefinitionAction_viewpng" namespace="/" cssClass="easyui-linkbutton" data-options="iconCls:'icon-search'">查看流程图
   							<s:param name="id" value="id"></s:param>
   						</s:a>
+
+						<a onclick="del('${id}')" class="easyui-linkbutton">删除</a>
   					</td>
+					<script>
+						function del(id) {
+
+							$.messager.confirm("提示","是否要删除", function (r) {
+								if(r == false) return;
+							});
+
+							var url = 	"${pageContext.request.contextPath}/processDefinitionAction_del.action";
+							$.post(url, {id:id}, function (data) {
+								if(data == "success"){
+									$.messager.alert("提示","删除成功","info", function () {
+										location.href = "${pageContext.request.contextPath}/processDefinitionAction_list.action";
+									});
+								} else {
+									$.messager.alert("提示","删除失败","error");
+								}
+							});
+						}
+					</script>
   				</tr>
   				</s:iterator>
   		</tbody>
